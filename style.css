@@ -1,0 +1,429 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #080808;
+    color: #fff;
+
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/GamingHub-.png);
+    background-position: center;
+    background-size: cover;   
+}
+.logo{
+    width: 300px;
+    height: 130px;
+
+}
+#container{
+    padding: 10px 10%;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #1a1919;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+nav ul li a{
+    color: rgb(210, 50, 50);
+    text-decoration: none;
+    font-size: 18px;
+}
+nav ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    /* transform: scaleX(0);
+    transition: transform; */
+}
+nav ul li a:hover::after{
+    transform: scaleX(1);
+}
+nav .btnlogin-popup {
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid rgb(210, 50, 50);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: rgb(210, 50, 50);
+    font-weight: 500;
+    margin-left: 80px;
+    transition: .5s;
+    
+}
+nav .btnlogin-popup:hover {
+    background-color: rgb(210, 50, 50);
+    color: #080808;
+}
+
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: height .2s ease;
+}
+.wrapper.active {
+    height: 520px;
+}
+.wrapper .form-box.login{
+   transition: transform .18s ease;
+   transform: translateX(0);
+
+}
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+.wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(-400px);
+}
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #080808;
+    font-size: 2em;
+    color: rgb(210, 50, 50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+
+
+}
+
+.form-box h1{
+    font-size: 2em;
+    color: #080808;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;    
+}
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+}
+.remember-forget {
+    font-size: .9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.remember-forget label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.remember-forget a {
+    color: #162938;
+    text-decoration: none;
+}
+.remember-forget a:hover{
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: rgb(210, 50, 50);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #1a1919;
+    font-weight: 500;
+    padding-right: 20px;
+}
+
+.rapper{
+    padding-right: 20px
+}
+.login-register {
+    font-size: .9em;
+    color: #1a1919;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+
+}
+.login-register p a {
+    color: #080808;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-register p a:hover{
+    text-decoration: underline;
+}
+.home-wrapper{
+    height: 100vh;
+}
+.home-container{
+    display: flex;
+    justify-content: space-between;
+}
+.home-container-left{
+    margin-left: -50px;
+}
+.home-container-center{
+    display: flex;
+}
+.home-container-right{
+    display: flex;
+}
+
+
+.search-games{
+    border: 2px;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 5px;
+    color: rgb(52, 52, 52);
+    height: 20px;
+}
+.search-button{
+    background-color: rgb(210, 50, 50);
+    border-radius: 5px;
+    width: 5rem;
+    color: #FFF;
+}
+.js-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.99);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999;
+    -webkit-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
+  }
+  
+  .js-preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  @-webkit-keyframes dot {
+    50% {
+        -webkit-transform: translateX(96px);
+        transform: translateX(96px);
+    }
+  }
+  
+  @keyframes dot {
+    50% {
+        -webkit-transform: translateX(96px);
+        transform: translateX(96px);
+    }
+  }
+  
+  @-webkit-keyframes dots {
+    50% {
+        -webkit-transform: translateX(-31px);
+        transform: translateX(-31px);
+    }
+  }
+  
+  @keyframes dots {
+    50% {
+        -webkit-transform: translateX(-31px);
+        transform: translateX(-31px);
+    }
+  }
+  
+  .preloader-inner {
+    position: relative;
+    width: 142px;
+    height: 40px;
+    background: transparent;
+  }
+  
+  .preloader-inner .dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    left: 15px;
+    background: #e75e8d;
+    border-radius: 50%;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-animation: dot 2.8s infinite;
+    animation: dot 2.8s infinite;
+  }
+  
+  .preloader-inner .dots {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    margin-top: 12px;
+    margin-left: 31px;
+    -webkit-animation: dots 2.8s infinite;
+    animation: dots 2.8s infinite;
+  }
+  
+  .preloader-inner .dots span {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-left: 16px;
+    background: #e75e8d;
+    border-radius: 50%;
+  }
+.heading-section{
+    color: rgb(210, 50, 50);
+}
+.home-wrapper{
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    
+}
+.home-container{
+    display: flex;
+    
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#gameContainer{
+    display: flex;
+    width: 10px;
+    height: 10px;
+
+
+}
+.search-container{
+    /* display: flex; */
+    /* flex-direction: row; */
+    margin-left: 1200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/* .search-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    width: max-content;} */
+
+.myGameContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item {
+    width: 30%;/* Set the width of each item to 30% to fit 3 items in a row */
+    margin-right: 3.33%; /* Add some margin between items */
+  }
+  
+  /* Clear the margin-right on the last item of each row */
+  .item:nth-child(3n) {
+    margin-right: 0;
+  }
+  
+
+.section{
+    padding-bottom: 40px;
+}
+
+
+
