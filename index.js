@@ -1,12 +1,15 @@
 import API_KEY from './config.js';
+// import dotenv from 'dotenv';
+// dotenv.config();
+// import 'dotenv/config';
 
 const searchInput = document.querySelector(".search-games");
 const searchButton = document.querySelector(".search-button");
 console.log("Here")
-const loaderEl = document.getElementById("js.preloader");
 const gameList = document.getElementById("gameNewContainer");
 
-// Create a config.js file and store your key in API_KEY variable
+// Create a .env file and store your key in API_KEY variable
+
 
 const url = `https://api.rawg.io/api/games?key=${API_KEY}&dates=2009-01-01,2023-08-01&ordering=-added`
 
